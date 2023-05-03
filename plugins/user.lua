@@ -9,4 +9,14 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
+  {
+    "phaazon/hop.nvim",
+    lazy = false,
+    config = function()
+      require("hop").setup()
+      vim.keymap.set('n', '<Leader><Leader>a', '<cmd>HopAnywhere<cr>')
+      vim.keymap.set('n', '<Leader><Leader>s', '<cmd>HopWord<cr>')
+      vim.keymap.set('n', '<Leader><Leader>l', '<cmd>HopLine<cr>')
+    end,
+  },
 }
